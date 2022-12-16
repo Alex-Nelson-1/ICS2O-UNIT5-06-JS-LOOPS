@@ -14,8 +14,32 @@ if (navigator.serviceWorker) {
 }
 
 /**
- * This function displays an alert.
+ * This function does multiplication
  */
-function myButtonClicked() {
-  document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
+function multiply() { 
+  //Input #1
+  let numberOne = parseFloat(document.getElementById("numberOne").value)
+  //Input #2
+  let numberTwo = parseFloat(document.getElementById("numberTwo").value)
+  //Input for product
+  let product = null
+  //Process if #2 is negative
+  if (numberTwo < 0)  {
+    numberTwo = numberTwo * -1
+  while (numberTwo > 0) {
+    product = product + numberOne 
+    console.log(product)
+    numberTwo--
+    }
+    product = product * -1
+  } 
+  //Process if #2 is positive
+  else {
+  while (numberTwo > 0) {
+    product = product + numberOne 
+    console.log(product)
+    numberTwo--
+    }
+  }
+  document.getElementById("product").innerHTML = product
 }

@@ -52,28 +52,50 @@
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">My first PWA</span>
+          <span class="mdl-layout-title"
+            >Calculate the angles of your triangle</span
+          >
         </div>
       </header>
       <main class="mdl-layout__content">
-        <p></p>
-        <img
-          src="./images/notebook-animation.svg"
-          alt="Computer"
-          width="25%"
-          height="25%"
-        />
-        <p></p>
-        <!-- Raised button with ripple -->
+        <!--Text field accepts input for side length A-->
+        <form action="#">
+          First Number
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="numberOne"
+            />
+            <!--This will control the textfields error message and label-->
+            <label class="mdl-textfield__label" for="numberOne">Number 1</label>
+            <span class="mdl-textfield__error">Numbers Only!</span>
+          </div>
+        </form>
+        <!--Text field accepts input for side length B-->
+        <form action="#">
+          Second Number
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="numberTwo"
+            />
+            <!--This will control the textfields error message and label-->
+            <label class="mdl-textfield__label" for="numberTwo">Number 2</label>
+            <span class="mdl-textfield__error">Numbers Only!</span>
+          </div>
+        </form>
+        <!-- Accent-colored raised button that controls JS function -->
         <button
-          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          onclick="myButtonClicked()"
+          class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent"
+          onclick="multiply()"
         >
-          Say "Hello, World!"
+          Multiply
         </button>
-        <!-- basic text -->
-        <p></p>
-        <div id="hello-world"></div>
+        <div id="product"></div>
       </main>
     </div>
   </body>
