@@ -16,7 +16,7 @@ if (navigator.serviceWorker) {
 /**
  * This function does multiplication
  */
-function multiply() { 
+function multiply() {
   //Input #1
   let numberOne = parseFloat(document.getElementById("numberOne").value)
   //Input #2
@@ -24,21 +24,21 @@ function multiply() {
   //Input for product
   let product = null
   //Process if #2 is negative
-  if (numberTwo < 0)  {
+  if (numberTwo < 0) {
     numberTwo = numberTwo * -1
-  while (numberTwo > 0) {
-    product = product + numberOne 
-    console.log(product)
-    numberTwo--
+    while (numberTwo > 0) {
+      product = product + numberOne
+      console.log(product)
+      numberTwo--
     }
     product = product * -1
-  } 
+  }
   //Process if #2 is positive
   else {
-  while (numberTwo > 0) {
-    product = product + numberOne 
-    console.log(product)
-    numberTwo--
+    while (numberTwo > 0) {
+      product = product + numberOne
+      console.log(product)
+      numberTwo--
     }
   }
   document.getElementById("product").innerHTML = product
