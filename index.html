@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--- ICS2O-My first PWA --->
+<!--- ICS2O-Multiplcation using loops --->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <!--- None blocking for Lighthouse report --->
     <!--- https://stackoverflow.com/questions/32759272/how-to-load-css-asynchronously --->
+
+    <!-- Code to make sure MDL works -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -40,22 +42,26 @@
         href="https://code.getmdl.io/1.3.0/material.indigo-purple.min.css"
       />
     </noscript>
+    <!-- Favicon Code -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <title>Muliplication</title>
   </head>
   <body>
+    <!-- Referncing Js folder and MDL -->
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="./js/script.js"></script>
+    <!-- Header Code -->
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
           <span class="mdl-layout-title">Multiplication</span>
         </div>
       </header>
+      <!-- Main body of the website Code -->
       <main class="mdl-layout__content">
-        <!--Text field accepts input for side length A-->
+        <!--Text field accepts input for #1-->
         <form action="#">
           First Number
           <div class="mdl-textfield mdl-js-textfield">
@@ -70,7 +76,7 @@
             <span class="mdl-textfield__error">Numbers Only!</span>
           </div>
         </form>
-        <!--Text field accepts input for side length B-->
+        <!--Text field accepts input for #2 -->
         <form action="#">
           Second Number
           <div class="mdl-textfield mdl-js-textfield">
@@ -85,7 +91,7 @@
             <span class="mdl-textfield__error">Numbers Only!</span>
           </div>
         </form>
-        <!-- Accent-colored raised button that controls JS function -->
+        <!-- Accent-colored raised button that controls JS function to multiply -->
         <button
           class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent"
           onclick="multiply()"
